@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var orders =  [1,2,3,4,6]
-    var showOrders = false
+    var showOrders = true
     var body: some View {
         VStack {
             HeaderView().shadow(radius: 5)
             if showOrders {
                 OrderView(orders: orders)
+                    .cornerRadius(10)
             } else {
                 MenuItemView()
                     .padding(5)
