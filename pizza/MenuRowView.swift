@@ -13,6 +13,9 @@ struct MenuRowView: View {
         HStack(alignment: .top, spacing: 5) {
             if let image = UIImage(named: "\(item)_sm") {
                 Image(uiImage: image).font(.largeTitle)
+                    .clipShape(Circle())
+                    .padding(.trailing, -20)
+                    .padding(.leading, -15)
             }else{
                 Image("surfboard_lg").font(.largeTitle)
             }
@@ -20,6 +23,7 @@ struct MenuRowView: View {
                 Text("Margherita")
                 ratingsVIew(rating: 4)
             }
+            Spacer()
         }
     }
 }
