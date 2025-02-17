@@ -12,16 +12,20 @@ struct ContentView: View {
     var showOrders = false
     var body: some View {
         VStack {
-            HeaderView()
+            HeaderView().shadow(radius: 5)
             if showOrders {
                 OrderView(orders: orders)
             } else {
                 MenuItemView()
+                    .padding(5)
+                    .background(.thinMaterial, in: RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                 MenuView()
             }
             Spacer()
         }
         .padding()
+        //.background(Color.cyan)
+        .background(.linearGradient(colors: [.cyan, Color("Surf"), Color("Sky"), .white], startPoint: .topLeading, endPoint: .bottom))
     }
 }
 
