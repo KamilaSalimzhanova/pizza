@@ -18,7 +18,12 @@ struct ContentView: View {
                 Text("Some pizza company")
                     .background(.white)
             }
+            Label {
+                Text(5000, format: .currency(code: "KZT"))
+            }
+        icon: {
             Image(systemName: orders.isEmpty ? "cart" : "cart.fill")
+        }
             HStack {
                 Text("Order Pizza")
                     .font(.title)
@@ -29,7 +34,7 @@ struct ContentView: View {
                     HStack{
                         Text("Your ordered item for \(order)")
                         Spacer()
-                        Text(19.90, format: .currency(code: "USD"))
+                        Text(5000, format: .currency(code: "KZT"))
                     }
                 }
             }
