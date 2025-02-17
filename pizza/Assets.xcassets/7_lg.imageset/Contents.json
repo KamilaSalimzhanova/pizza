@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "surfBanner.jpg",
+      "filename" : "7_lg.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "surfBanner 1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "surfBanner 2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

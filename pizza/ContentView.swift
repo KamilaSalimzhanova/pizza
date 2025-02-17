@@ -35,15 +35,23 @@ struct ContentView: View {
             }
             
             VStack {
-                Image(systemName: "rectangle.fill").font(.largeTitle)
+                if let image = UIImage(named: "0_lg") {
+                    Image(uiImage: image).font(.largeTitle)
+                }else{
+                    Image("surfboard_lg").font(.largeTitle)
+                }
                 Text("Margherita")
                 Text("Descpription")
             }
             
             ScrollView {
-                ForEach(1...25, id:\.self) { item in
+                ForEach(1...9, id:\.self) { item in
                     HStack(alignment: .top, spacing: 5) {
-                        Image(systemName: "\(item).circle.fill").font(.largeTitle)
+                        if let image = UIImage(named: "\(item)_sm") {
+                            Image(uiImage: image).font(.largeTitle)
+                        }else{
+                            Image("surfboard_lg").font(.largeTitle)
+                        }
                         VStack(alignment: .leading) {
                             Text("Margherita")
                             Text("Descpription")
