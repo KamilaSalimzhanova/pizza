@@ -18,7 +18,7 @@ struct MenuRowView: View {
             }
             VStack(alignment: .leading) {
                 Text("Margherita")
-                Text("Descpription")
+                ratingsVIew(rating: 4)
             }
         }
     }
