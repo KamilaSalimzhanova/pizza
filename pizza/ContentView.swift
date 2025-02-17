@@ -10,10 +10,34 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ZStack {
+                Image("Image")
+                    .resizable()
+                .scaledToFit()
+                Text("Some pizza company")
+                    .background(.white)
+            }
+            HStack {
+                Text("Order Pizza")
+                    .font(.title)
+                Spacer()
+            }
+            HStack{
+                Text("Your ordered items")
+                Spacer()
+                Text(19.90, format: .currency(code: "USD"))
+            }
+            HStack(alignment: .top, spacing: 5) {
+                Image("Image 1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 85)
+                VStack(alignment: .leading) {
+                    Text("Margherita")
+                    Text("Descpription")
+                }
+            }
+            Spacer()
         }
         .padding()
     }
