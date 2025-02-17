@@ -8,62 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var orders: [Int] = [1,2,3,4,6]
+    var orders =  [1,2,3,4,6]
     var body: some View {
         VStack {
-            ZStack {
-                Image("Image")
-                    .resizable()
-                .scaledToFit()
-                Text("Some pizza company")
-                    .background(.white)
-            }
-            Label {
-                Text(5000, format: .currency(code: "KZT"))
-            }
-        icon: {
-            Image(systemName: orders.isEmpty ? "cart" : "cart.fill")
-        }
-            HStack {
-                Text("Order Pizza")
-                    .font(.title)
-                Spacer()
-            }
-            ScrollView {
-                ForEach(orders, id:\.self) { order in
-                    HStack{
-                        Text("Your ordered item for \(order)")
-                        Spacer()
-                        Text(5000, format: .currency(code: "KZT"))
-                    }
-                }
-            }
-            
-            VStack {
-                if let image = UIImage(named: "0_lg") {
-                    Image(uiImage: image).font(.largeTitle)
-                }else{
-                    Image("surfboard_lg").font(.largeTitle)
-                }
-                Text("Margherita")
-                Text("Descpription")
-            }
-            
-            ScrollView {
-                ForEach(1...9, id:\.self) { item in
-                    HStack(alignment: .top, spacing: 5) {
-                        if let image = UIImage(named: "\(item)_sm") {
-                            Image(uiImage: image).font(.largeTitle)
-                        }else{
-                            Image("surfboard_lg").font(.largeTitle)
-                        }
-                        VStack(alignment: .leading) {
-                            Text("Margherita")
-                            Text("Descpription")
-                        }
-                    }
-                }
-            }
+            HeaderView()
+            OrderView(orders: orders)
+            MenuItemView()
+            MenuView()
             Spacer()
         }
         .padding()
@@ -75,3 +26,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
