@@ -18,6 +18,10 @@
 		8EFA48D52D636B0300C68060 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48D42D636B0300C68060 /* OrderRowView.swift */; };
 		8EFA48D72D636B0D00C68060 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48D62D636B0D00C68060 /* HeaderView.swift */; };
 		8EFA48D92D636FAD00C68060 /* ratingsVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48D82D636FAD00C68060 /* ratingsVIew.swift */; };
+		8EFA48DF2D638E5600C68060 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48DB2D638E5600C68060 /* OrderModel.swift */; };
+		8EFA48E02D638E5600C68060 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48DC2D638E5600C68060 /* MenuItem.swift */; };
+		8EFA48E12D638E5600C68060 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48DD2D638E5600C68060 /* OrderItem.swift */; };
+		8EFA48E22D638E5600C68060 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48DE2D638E5600C68060 /* MenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		8EFA48D42D636B0300C68060 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		8EFA48D62D636B0D00C68060 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8EFA48D82D636FAD00C68060 /* ratingsVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ratingsVIew.swift; sourceTree = "<group>"; };
+		8EFA48DB2D638E5600C68060 /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		8EFA48DC2D638E5600C68060 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		8EFA48DD2D638E5600C68060 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		8EFA48DE2D638E5600C68060 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 				8EFA48D22D636AF300C68060 /* MenuRowView.swift */,
 				8EFA48D62D636B0D00C68060 /* HeaderView.swift */,
 				8EFA48C22D6355C100C68060 /* Assets.xcassets */,
+				8EFA48DA2D638E5600C68060 /* Model Code */,
 				8EFA48C42D6355C100C68060 /* Preview Content */,
 			);
 			path = pizza;
@@ -86,6 +95,17 @@
 				8EFA48C52D6355C100C68060 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8EFA48DA2D638E5600C68060 /* Model Code */ = {
+			isa = PBXGroup;
+			children = (
+				8EFA48DB2D638E5600C68060 /* OrderModel.swift */,
+				8EFA48DC2D638E5600C68060 /* MenuItem.swift */,
+				8EFA48DD2D638E5600C68060 /* OrderItem.swift */,
+				8EFA48DE2D638E5600C68060 /* MenuModel.swift */,
+			);
+			path = "Model Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,11 +180,15 @@
 			files = (
 				8EFA48CD2D636A4A00C68060 /* OrderView.swift in Sources */,
 				8EFA48CF2D636A9700C68060 /* MenuView.swift in Sources */,
+				8EFA48DF2D638E5600C68060 /* OrderModel.swift in Sources */,
 				8EFA48C12D6355C000C68060 /* ContentView.swift in Sources */,
 				8EFA48BF2D6355C000C68060 /* pizzaApp.swift in Sources */,
+				8EFA48E12D638E5600C68060 /* OrderItem.swift in Sources */,
 				8EFA48D32D636AF300C68060 /* MenuRowView.swift in Sources */,
 				8EFA48D52D636B0300C68060 /* OrderRowView.swift in Sources */,
 				8EFA48D12D636AE600C68060 /* MenuItemView.swift in Sources */,
+				8EFA48E22D638E5600C68060 /* MenuModel.swift in Sources */,
+				8EFA48E02D638E5600C68060 /* MenuItem.swift in Sources */,
 				8EFA48D72D636B0D00C68060 /* HeaderView.swift in Sources */,
 				8EFA48D92D636FAD00C68060 /* ratingsVIew.swift in Sources */,
 			);
