@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var orders: [OrderItem] = testOrders
+    var menu: [MenuItem]
+    @StateObject var orders: OrderModel = OrderModel()
     @State private var showOrders = false
+    @State private var selectedItem: MenuItem = noMenuItem
     var body: some View {
         VStack {
             HeaderView()
                 .shadow(radius: 5)
+                .environment(\.colorScheme, .light) // override dark env
             HStack {
-                Text("\(orders.count) orders")
+                Text("\(orders.orderItems.count) orders")
                 Spacer()
                 Button {
                     showOrders.toggle()
@@ -26,25 +29,26 @@ struct ContentView: View {
             .foregroundColor(.white)
             .font(.title2)
             if showOrders {
-                OrderView(orders: $orders)
+                OrderView(orders: orders)
                     .cornerRadius(10)
             } else {
-                MenuItemView()
+                MenuItemView(item: $selectedItem, orders: orders)
                     .padding(5)
                     .background(.thinMaterial, in: RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
-                MenuView()
+                MenuView(menu: menu, selectedItem: $selectedItem)
             }
             Spacer()
         }
         .padding()
         //.background(Color.cyan)
         .background(.linearGradient(colors: [.cyan, Color("Surf"), Color("Sky"), .white], startPoint: .topLeading, endPoint: .bottom))
+        .environmentObject(orders)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(menu: MenuModel().menu)
     }
 }
 

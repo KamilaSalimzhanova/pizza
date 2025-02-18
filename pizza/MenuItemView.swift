@@ -9,18 +9,20 @@ import SwiftUI
 
 struct MenuItemView: View {
     @State private var addedItem: Bool = false
+    @Binding var item: MenuItem
+    @ObservedObject var orders: OrderModel
     var body: some View {
         VStack {
             HStack {
                 
-                Text("Margherita Dodo pizza")
+                Text(item.name)
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundStyle(.ultraThickMaterial)
                     .padding(.leading)
     
                 
-                if let image = UIImage(named: "0x_lg") {
+                if let image = UIImage(named: "\(item.id)_lg") {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -42,18 +44,21 @@ struct MenuItemView: View {
             
             VStack(alignment: .leading) {
                 ScrollView {
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla iaculis justo eget hendrerit. Phasellus elementum, magna vel consequat interdum, augue nunc efficitur purus, sit amet venenatis dui sem vitae velit. Praesent eget lobortis magna. Integer laoreet leo mauris, sed eleifend turpis consequat at. Pellentesque elementum dictum quam sed posuere.")
+                    Text(item.description)
                         .font(.custom("Georgia", size: 18, relativeTo: .body))
                 }
             }
             Button {
                 addedItem = true
+                orders.addOrder(item, quantity: 1)
             } label: { // HStack
                 Spacer()
-                Text(12.99, format: .currency(code: "KZT"))
+                Text(item.price, format: .currency(code: "KZT"))
                 Image(systemName: addedItem ? "cart.fill.badge.plus" : "cart.badge.plus")
                 Spacer()
-            }.padding()
+            }
+            .disabled(item.id < 0)
+            .padding()
                 .background(.red, in: Capsule())
                 .foregroundStyle(.white)
                 .padding(5)
@@ -63,6 +68,6 @@ struct MenuItemView: View {
 
 struct MenuItemView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemView()
+        MenuItemView(item: .constant(testMenuItem), orders: OrderModel())
     }
 }
