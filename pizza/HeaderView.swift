@@ -32,16 +32,11 @@ struct HeaderView: View {
                         .fontWeight(.heavy)
                 }
             }
-            Label {
-                Text(orders.orderTotal, format: .currency(code: "KZT"))
-                    .fontWeight(.semibold)
-            }icon: {
-            Image(systemName: orders.orderItems.isEmpty ? "cart" : "cart.fill")
-            }
+            
         }
         .background(.ultraThinMaterial)
     }
-        
+    
 }
 
 

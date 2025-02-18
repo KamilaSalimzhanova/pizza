@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E46CEEF2D64F43C00FA8049 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CEEE2D64F43C00FA8049 /* StatusBarView.swift */; };
+		8E46CEF12D64F8D500FA8049 /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CEF02D64F8D500FA8049 /* OrderItemView.swift */; };
 		8EFA48BF2D6355C000C68060 /* pizzaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48BE2D6355C000C68060 /* pizzaApp.swift */; };
 		8EFA48C12D6355C000C68060 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48C02D6355C000C68060 /* ContentView.swift */; };
 		8EFA48C32D6355C100C68060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFA48C22D6355C100C68060 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E46CEEE2D64F43C00FA8049 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
+		8E46CEF02D64F8D500FA8049 /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
 		8EFA48BB2D6355C000C68060 /* pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFA48BE2D6355C000C68060 /* pizzaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pizzaApp.swift; sourceTree = "<group>"; };
 		8EFA48C02D6355C000C68060 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 			children = (
 				8EFA48BE2D6355C000C68060 /* pizzaApp.swift */,
 				8EFA48C02D6355C000C68060 /* ContentView.swift */,
+				8E46CEF02D64F8D500FA8049 /* OrderItemView.swift */,
+				8E46CEEE2D64F43C00FA8049 /* StatusBarView.swift */,
 				8EFA48D82D636FAD00C68060 /* ratingsVIew.swift */,
 				8EFA48CC2D636A4A00C68060 /* OrderView.swift */,
 				8EFA48D42D636B0300C68060 /* OrderRowView.swift */,
@@ -185,9 +191,11 @@
 				8EFA48BF2D6355C000C68060 /* pizzaApp.swift in Sources */,
 				8EFA48E12D638E5600C68060 /* OrderItem.swift in Sources */,
 				8EFA48D32D636AF300C68060 /* MenuRowView.swift in Sources */,
+				8E46CEF12D64F8D500FA8049 /* OrderItemView.swift in Sources */,
 				8EFA48D52D636B0300C68060 /* OrderRowView.swift in Sources */,
 				8EFA48D12D636AE600C68060 /* MenuItemView.swift in Sources */,
 				8EFA48E22D638E5600C68060 /* MenuModel.swift in Sources */,
+				8E46CEEF2D64F43C00FA8049 /* StatusBarView.swift in Sources */,
 				8EFA48E02D638E5600C68060 /* MenuItem.swift in Sources */,
 				8EFA48D72D636B0D00C68060 /* HeaderView.swift in Sources */,
 				8EFA48D92D636FAD00C68060 /* ratingsVIew.swift in Sources */,
