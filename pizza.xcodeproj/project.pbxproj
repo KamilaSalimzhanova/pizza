@@ -10,6 +10,7 @@
 		8E1B95A02D67811100031CEB /* MenuItemTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B959F2D67811100031CEB /* MenuItemTileView.swift */; };
 		8E1B95A22D67814800031CEB /* MenuGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B95A12D67814800031CEB /* MenuGridView.swift */; };
 		8E1B95A42D6784A500031CEB /* FavoriteTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B95A32D6784A500031CEB /* FavoriteTileView.swift */; };
+		8E1B95A62D67A86000031CEB /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B95A52D67A86000031CEB /* OrderDetailView.swift */; };
 		8E46CEEF2D64F43C00FA8049 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CEEE2D64F43C00FA8049 /* StatusBarView.swift */; };
 		8E46CEF12D64F8D500FA8049 /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E46CEF02D64F8D500FA8049 /* OrderItemView.swift */; };
 		8EFA48BF2D6355C000C68060 /* pizzaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA48BE2D6355C000C68060 /* pizzaApp.swift */; };
@@ -33,6 +34,7 @@
 		8E1B959F2D67811100031CEB /* MenuItemTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTileView.swift; sourceTree = "<group>"; };
 		8E1B95A12D67814800031CEB /* MenuGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGridView.swift; sourceTree = "<group>"; };
 		8E1B95A32D6784A500031CEB /* FavoriteTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTileView.swift; sourceTree = "<group>"; };
+		8E1B95A52D67A86000031CEB /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		8E46CEEE2D64F43C00FA8049 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		8E46CEF02D64F8D500FA8049 /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
 		8EFA48BB2D6355C000C68060 /* pizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				8EFA48D82D636FAD00C68060 /* ratingsVIew.swift */,
 				8EFA48CC2D636A4A00C68060 /* OrderView.swift */,
 				8EFA48D42D636B0300C68060 /* OrderRowView.swift */,
+				8E1B95A52D67A86000031CEB /* OrderDetailView.swift */,
 				8E1B959F2D67811100031CEB /* MenuItemTileView.swift */,
 				8E1B95A32D6784A500031CEB /* FavoriteTileView.swift */,
 				8E1B95A12D67814800031CEB /* MenuGridView.swift */,
@@ -208,6 +211,7 @@
 				8E46CEEF2D64F43C00FA8049 /* StatusBarView.swift in Sources */,
 				8E1B95A22D67814800031CEB /* MenuGridView.swift in Sources */,
 				8EFA48E02D638E5600C68060 /* MenuItem.swift in Sources */,
+				8E1B95A62D67A86000031CEB /* OrderDetailView.swift in Sources */,
 				8EFA48D72D636B0D00C68060 /* HeaderView.swift in Sources */,
 				8E1B95A02D67811100031CEB /* MenuItemTileView.swift in Sources */,
 				8EFA48D92D636FAD00C68060 /* ratingsVIew.swift in Sources */,
