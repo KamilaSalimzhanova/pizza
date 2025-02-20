@@ -18,6 +18,7 @@ struct OrderDetailView: View {
     @State private var pizzaCrust:PizzaCrust
     @State private var name:String
     @State private var comments:String
+    @State private var presentAlert: Bool = false
     @EnvironmentObject var orders:OrderModel
     
     init(orderItem:Binding<OrderItem>,presentSheet:Binding<Bool>,newOrder:Binding<Bool>){
@@ -102,9 +103,14 @@ struct OrderDetailView: View {
                     .shadow(radius: 1)
             Spacer()
             HStack {
-                Button("Order"){
+                Button("Update"){
                     updateOrder()
-                    
+                    if newOrder {
+                        orders.addOrder(orderItem: orderItem)
+                    }
+                    presentSheet = false
+                    presentAlert = true
+
                     }
                     .padding()
                     .padding([.leading,.trailing])
@@ -113,20 +119,21 @@ struct OrderDetailView: View {
                     .font(.title)
                     .padding(.trailing,20)
                     .shadow(radius:7,x:2,y:2)
-                Button("Cancel"){
-                    
-                }
-                .padding()
-                .padding([.leading,.trailing])
-                .foregroundColor(.white)
-                .background(.red,in: Capsule())
-                .font(.title)
-                .shadow(radius:7,x:2,y:2)
+                    .alert("Dodo pizza company \n \(orderItem.name)", isPresented: $presentAlert){}
+//                Button("Cancel"){
+//                    presentSheet = false
+//                }
+//                .padding()
+//                .padding([.leading,.trailing])
+//                .foregroundColor(.white)
+//                .background(.red,in: Capsule())
+//                .font(.title)
+//                .shadow(radius:7,x:2,y:2)
             }
         }
         .padding()
         .navigationTitle("Your Order")
-        .background(Color("Surf"))
+        .background(Color("Surf"), in: Rectangle())
         
     }
     

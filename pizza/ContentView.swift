@@ -14,15 +14,22 @@ struct ContentView: View {
     @State private var showMenuGrid = false
     @State private var selectedItem: MenuItem = noMenuItem
     var body: some View {
-        VStack {
+        TabView {
+            VStack {
             HeaderView()
                 .shadow(radius: 5)
                 .environment(\.colorScheme, .light) // override dark env
-            StatusBarView(showOrders: $showOrders, showMenuGrid: $showMenuGrid)
-            if showOrders {
-                OrderView(orders: orders)
+            //StatusBarView(showOrders: $showOrders, showMenuGrid: $showMenuGrid)
+            OrderView(orders: orders)
                     .cornerRadius(10)
-            } else {
+            }.tabItem {
+                Label("Order", systemImage: "cart")
+            }
+            VStack {
+                HeaderView()
+                    .shadow(radius: 5)
+                    .environment(\.colorScheme, .light) // override dark env
+                //StatusBarView(showOrders: $showOrders, showMenuGrid: $showMenuGrid)
                 MenuItemView(item: $selectedItem, orders: orders)
                     .padding(5)
                     .background(.thinMaterial, in: RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
@@ -31,9 +38,9 @@ struct ContentView: View {
                 } else {
                     MenuGridView(selectedItem: $selectedItem, menu: menu)
                 }
+            }.tabItem {
+                Label("Menu", systemImage: "menucard")
             }
-            
-            Spacer()
         }
         .padding()
         //.background(Color.cyan)

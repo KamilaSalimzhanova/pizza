@@ -12,6 +12,8 @@ struct MenuItemView: View {
     @Binding var item: MenuItem
     @State var presentAlert: Bool = false
     @ObservedObject var orders: OrderModel
+    @State private var newOrder: Bool = true
+    @State private var order: OrderItem = noOrderItem
     var body: some View {
         VStack {
             HStack {
@@ -50,6 +52,7 @@ struct MenuItemView: View {
                 }
             }
             Button {
+                order = OrderItem(id: -999, item: item)
                 presentAlert = true
             } label: { // HStack
                 Spacer()
@@ -73,6 +76,11 @@ struct MenuItemView: View {
 //                    orders.addOrder(item, quantity: 2)
 //                }
 //            }
+            .sheet(isPresented: $presentAlert){
+                addedItem = true
+            } content: {
+                OrderDetailView(orderItem: $order, presentSheet: $presentAlert, newOrder: $newOrder)
+            }
             
         }
     }
