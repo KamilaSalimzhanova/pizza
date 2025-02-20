@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MenuGridView: View {
     @State private var favorites: [Int] = [-1]
-    @State var selectedItem: MenuItem = noMenuItem
+    @Binding var selectedItem: MenuItem
+    @Namespace private var nspace
     func menu(_ id: Int) -> MenuItem {
         menu.first(where: {$0.id == id}) ?? noMenuItem
     }
@@ -21,6 +22,10 @@ struct MenuGridView: View {
             LazyVGrid(columns: columnLayout2) {
                 ForEach(favorites.sorted(), id:\.self) { item in
                     FavoriteTileView(menuItem: menu(item))
+                        .matchedGeometryEffect(id: item, in: nspace)
+                        .onTapGesture {
+                            selectedItem = menu(item)
+                        }
                         .onLongPressGesture {
                             if let index = favorites.firstIndex(where: {$0 == item}) {
                                 favorites.remove(at: index)
@@ -28,12 +33,14 @@ struct MenuGridView: View {
                         }
                 }
             }
-            Text(selectedItem.name)
+            //Text(selectedItem.name)
             ScrollView {
                 LazyVGrid(columns: columnLayout1) {
                     ForEach(menu) { item in
                         if !favorites.contains(item.id){
                             MenuItemTileView(menuItem: item)
+                                .animation(.easeOut, value: favorites)
+                                .matchedGeometryEffect(id: item.id, in: nspace)
                                 .onTapGesture(count: 2) {
                                     if !favorites.contains(item.id){
                                         withAnimation(.easeInOut){
@@ -58,6 +65,6 @@ struct MenuGridView: View {
 
 struct MenuGridView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuGridView(menu: MenuModel().menu)
+        MenuGridView(selectedItem: .constant(testMenuItem), menu: MenuModel().menu)
     }
 }

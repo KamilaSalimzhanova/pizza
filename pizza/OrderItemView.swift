@@ -23,13 +23,15 @@ struct OrderItemView: View {
             TextField("Name", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             Toggle(isOn: $doubleIngredient) {
-                Text("Double Ingredients" + (doubleIngredient ? " Yes" : " No"))}
+                Text("Double Ingredients" + (doubleIngredient ? " Yes" : " No"))
+            }
             Stepper(value: $quantity, in: 1...10){
                 Text("\(quantity) " + (quantity == 1 ? "pizza" : "pizzas"))
             }
             Picker(selection: $pizzaCrust) {
                 ForEach(PizzaCrust.allCases, id: \.self) { crust in
-                    Text("\(crust.rawValue)").tag(crust)
+                    Text("\(crust.rawValue)")
+                        .tag(crust)
                 }
             } label: {
                 Text("pizzaCrust")
